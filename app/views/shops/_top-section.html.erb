@@ -1,0 +1,33 @@
+<section class="section">
+    <h1 class="title is-spaced">Ruby Candy Shop</h1>
+    <h2 class="subtitle is-spaced=begin  =end">
+        Create a candy shop and add your favorite candies to it!
+    </h2>
+
+<%= form_for(@shop_new) do |f| %>
+    <div class="field">
+        <label class="label">Create a Shop</label>
+        <%= f.text_field(:name, :placeholder => "Enter shop name", :class => "input is-medium") %>
+    </div>
+    <div class="field">
+        <%= f.submit("Enter Shop", :class => "button is-link") %>
+    </div>
+<% end %>
+
+    <div class="title is-5 is-spaced pt-5">
+        😁 Visit Candy Shops
+    </div>
+
+    <div class="row shop-names">
+        <% if @shops.size == 0 %>
+            <div class="title is-6"> No shops created</p>
+        <% else %>
+        <div class="buttons">
+            <% @shops.each do |shop| %>
+                    <%= link_to(shop.name, shop_path(shop.id), :class => "button is-primary is-light") %>
+            <% end %>
+            </div>
+        <% end %>
+    <div>
+</section>
+
