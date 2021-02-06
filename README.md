@@ -5,20 +5,42 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
+* Ruby version: `2.5.1`
 
 * Configuration
+Download and install Ruby on Rails on your machine.
 
-* Database creation
+-unzip the code artifact in your local machine
 
-* Database initialization
+-Install rails
 
-* How to run the test suite
+```bash
+gem install rails
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+-Bundle the app
 
-* Deployment instructions
+```bash
+bundle install
+```
 
-* ...
+-Open the database.yml and modify the following snippet with the username and password:
+
+```yml
+  username: nouman
+  password: <%= ENV['SAMPLE_DATABASE_PASSWORD'] %>
+```
+
+-In order to create the database schema:
+
+```bash
+rails db:migrate
+```
+
+-To start the server:
+
+```bash
+rails s
+```
+
+The web application can be accessed over http://localhost:3000.
