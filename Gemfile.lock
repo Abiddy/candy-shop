@@ -102,6 +102,10 @@ GEM
     minitest (5.14.3)
     msgpack (1.4.2)
     nio4r (2.5.5)
+    nokogiri (1.11.1-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.11.1-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
     pg (1.2.3)
@@ -200,6 +204,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  universal-darwin-20
   x86_64-linux
 
 DEPENDENCIES
@@ -223,7 +228,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.6.3p62
 
 BUNDLED WITH
    2.2.7
